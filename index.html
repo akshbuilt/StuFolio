@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Stufolio | Portfolio Builder for Students</title>
+    <style>
+      .hero-right {
+        width: 100%;
+        height: 600px;
+        min-width: 0;
+        position: relative;
+      }
+
+      #three-canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body class="font-[Plus_Jakarta_Sans] bg-[#08080d]">
+    <header>
+      <nav class=" px-5 py-2 md:py-5 lg:px-40 flex justify-between">
+        <div class="font-bold text-[20px] md:text-3xl text-white">
+          <h1>StuFolio</h1>
+        </div>
+        <div>
+          <ul class="list-none hidden text-[#a1a1aa] lg:flex">
+            <li><a class="text-[20px] p-4" href="#">How it Works</a></li>
+            <li><a class="text-[20px] p-4" href="#">Templates</a></li>
+            <li><a class="text-[20px] p-4" href="#">Features</a></li>
+          </ul>
+        </div>
+        <div class="flex gap-2 md:gap-3.5 lg:gap-6 items-center justify-center">
+          <a class="text-[20px] lg:text-[22px] text-[#7c3aed]" href="#"
+            >Login</a
+          >
+          <a
+            href=""
+            class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl"
+            >SignUp</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <section
+          id="hero"
+          class="mt-10 grid grid-cols-1 lg:grid-cols-2 min-h-130"
+        >
+          <div class="mx-10 my-3 lg:ml-40">
+            <p class="text-[#7c3aed] text-[20px]">✦ Built for students</p>
+            <h1 class="text-[48px] leading-16 lg:text-[66px] text-white font-semibold lg:leading-22">
+              Your work. <br />
+              Your story. <br />
+              Your
+              <span class="text-[54px] lg:text-[80px] text-[#7c3aed] font-bold">StuFolio</span
+              >.
+            </h1>
+            <p class="text-[#a1a1aa] text-[16px] md:text-[20px] mt-5">
+              Create a professional portfolio from your projects, achievements,
+              skills, and experiences — without starting from scratch.
+            </p>
+            <div class="mt-10">
+              <a class="text:[20px] lg:text-[22px] text-[#7c3aed] p-4" href="#"
+                >Try Demo</a
+              >
+              <a
+                href=""
+                class="lg:text-[22px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl"
+                >Get Started</a
+              >
+            </div>
+          </div>
+          <div class="hero-right" id="canvas-container">
+            <canvas id="three-canvas"></canvas>
+          </div>
+        </section>
+        <section id="how-it-works">
+          <h1 class="text-white text-[30px] text-center font-bold">
+            How It works
+          </h1>
+          <p class="text-[#a1a1aa] text-[18px] text-center">
+            From idea to portfolio in minutes.
+          </p>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 m-8 md:m-14 lg:m-20"
+          >
+            <div
+              class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl"
+            >
+              <span class="text-[#7c3aed] text-[40px] font-bold mb-3">01</span>
+              <h1 class="text-white text-[28px] text-center font-semibold mb-3">
+                Pick a template
+              </h1>
+              <p class="text-[#a1a1aa] text-[22px] text-center">
+                Start with a professionally designed portfolio template that
+                fits your style.
+              </p>
+            </div>
+            <div
+              class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl"
+            >
+              <span class="text-[#7c3aed] text-[40px] font-bold mb-3">02</span>
+              <h1 class="text-white text-center text-[28px] font-semibold mb-3">
+                Tell StuFolio about yourself
+              </h1>
+              <p class="text-[#a1a1aa] text-[22px] text-center">
+                Add your projects, skills, achievements, experience, and
+                everything you want to showcase.
+              </p>
+            </div>
+            <div
+              class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl"
+            >
+              <span class="text-[#7c3aed] text-[40px] font-bold mb-3">03</span>
+              <h1 class="text-white text-center text-[28px] font-semibold mb-3">
+                Get your portfolio
+              </h1>
+              <p class="text-[#a1a1aa] text-[22px] text-center">
+                StuFolio turns your information into a polished portfolio you
+                can preview, customize, and share.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="templates">
+          <h1 class="text-white text-[30px] mt-5 text-center font-bold">
+            Choose your style.
+          </h1>
+          <p class="text-[#a1a1aa] text-[18px] text-center">
+            Start with a template designed to make your story stand out.
+          </p>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 mx-10 my-8 md:mx-20 md:my-10 lg:mx-40 lg:my-14">
+            <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+              <img
+                src="#"
+                alt="templates-minimal"
+                class="w-full h-40 bg-blue-900"
+              />
+              <div class="px-8 py-4">
+                <h1 class="text-white text-[30px] font-bold">Minimal</h1>
+                <p class="text-[#a1a1aa] text-[18px]">Clean & professional</p>
+                <a href="" class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Use Template</a> 
+              </div>
+            </div>
+            <div>
+                 <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+              <img
+                src="#"
+                alt="templates-creative"
+                class="w-full h-40 bg-yellow-900"
+              />
+              <div class="px-8 py-2">
+                <h1 class="text-white text-[30px] font-bold">Creative</h1>
+                <p class="text-[#a1a1aa] text-[18px]">Bold & Expressive</p>
+                <a href="" class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Use Template</a> 
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script>
+      const container = document.getElementById("canvas-container");
+      const canvas = document.getElementById("three-canvas");
+
+      const scene = new THREE.Scene();
+
+      const camera = new THREE.PerspectiveCamera(
+        45,
+        container.clientWidth / container.clientHeight,
+        0.1,
+        100,
+      );
+      camera.position.set(0, 0, 6);
+
+      const renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        antialias: true,
+        alpha: true,
+      });
+
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.outputEncoding = THREE.sRGBEncoding;
+
+      // Lighting
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.55);
+      scene.add(ambientLight);
+
+      const purpleLight = new THREE.PointLight(0x7c3aed, 3, 15);
+      purpleLight.position.set(4, 3, 5);
+      scene.add(purpleLight);
+
+      const violetLight = new THREE.PointLight(0xa78bfa, 1.5, 12);
+      violetLight.position.set(-6, -20, 3);
+      scene.add(violetLight);
+
+      // Group
+      const portfolio = new THREE.Group();
+      scene.add(portfolio);
+
+      // Main Card
+      const cardGeometry = new THREE.BoxGeometry(5.5, 2.25, 0.28);
+      const cardMaterial = new THREE.MeshStandardMaterial({
+        color: 0x14141c,
+        roughness: 0.3,
+        metalness: 0.35,
+      });
+      const card = new THREE.Mesh(cardGeometry, cardMaterial);
+      portfolio.add(card);
+
+      // Inner Panel
+      const panelGeometry = new THREE.BoxGeometry(5.9, 2.8, 0.08);
+      const panelMaterial = new THREE.MeshStandardMaterial({
+        color: 0x0f0f17,
+        roughness: 0.45,
+        metalness: 0.15,
+      });
+      const panel = new THREE.Mesh(panelGeometry, panelMaterial);
+      panel.position.z = 0.19;
+      portfolio.add(panel);
+
+      // Avatar
+      const avatarGeometry = new THREE.CircleGeometry(0.42, 32);
+      const avatarMaterial = new THREE.MeshStandardMaterial({
+        color: 0x7c3aed,
+        emissive: 0x3b0764,
+        emissiveIntensity: 0.7,
+      });
+      const avatar = new THREE.Mesh(avatarGeometry, avatarMaterial);
+      avatar.position.set(-1.65, 0.85, 0.27);
+      portfolio.add(avatar);
+
+      // Text Bars Helper
+      function createBar(width, height, color, x, y, z = 0.27) {
+        const geometry = new THREE.BoxGeometry(width, height, 0.05);
+        const material = new THREE.MeshStandardMaterial({
+          color: color,
+          roughness: 0.5,
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.position.set(x, y, z);
+        portfolio.add(mesh);
+        return mesh;
+      }
+
+      createBar(1.35, 0.14, 0xfafafa, -0.45, 0.98);
+      createBar(0.95, 0.09, 0xa1a1aa, -0.65, 0.7);
+
+      // Project Cards Helper
+      function createProjectCard(x, y) {
+        const geometry = new THREE.BoxGeometry(1.15, 0.85, 0.08);
+        const material = new THREE.MeshStandardMaterial({
+          color: 0x14141c,
+          roughness: 0.4,
+          metalness: 0.2,
+        });
+        const project = new THREE.Mesh(geometry, material);
+        project.position.set(x, y, 0.27);
+        portfolio.add(project);
+
+        const thumbnailGeometry = new THREE.BoxGeometry(0.85, 0.32, 0.04);
+        const thumbnailMaterial = new THREE.MeshStandardMaterial({
+          color: 0x7c3aed,
+          emissive: 0x3b0764,
+          emissiveIntensity: 0.45,
+        });
+        const thumbnail = new THREE.Mesh(thumbnailGeometry, thumbnailMaterial);
+        thumbnail.position.set(x, y + 0.15, 0.34);
+        portfolio.add(thumbnail);
+
+        createBar(0.55, 0.07, 0xfafafa, x - 0.12, y - 0.15, 0.35);
+      }
+
+      createProjectCard(-1.55, -0.45);
+      createProjectCard(-0.25, -0.45);
+      createProjectCard(1.05, -0.45);
+
+      // Glow Orb
+      const glowGeometry = new THREE.SphereGeometry(0.65, 32, 32);
+      const glowMaterial = new THREE.MeshBasicMaterial({
+        color: 0x7c3aed,
+        transparent: true,
+        opacity: 0.18,
+      });
+      const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+      glow.position.set(1.9, 1.25, -0.3);
+      portfolio.add(glow);
+
+      // Floating Dots
+      const dotMaterial = new THREE.MeshBasicMaterial({ color: 0xa78bfa });
+      const dots = [];
+      for (let i = 0; i < 7; i++) {
+        const dotGeometry = new THREE.SphereGeometry(
+          0.035 + Math.random() * 0.025,
+          16,
+          16,
+        );
+        const dot = new THREE.Mesh(dotGeometry, dotMaterial);
+        dot.position.set(
+          (Math.random() - 0.5) * 6,
+          (Math.random() - 0.5) * 4,
+          0.2,
+        );
+        scene.add(dot);
+        dots.push(dot);
+      }
+
+      // Mouse Tracking
+      const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+      window.addEventListener("mousemove", (event) => {
+        mouse.targetX = (event.clientX / window.innerWidth) * 2 - 1;
+        mouse.targetY = -(event.clientY / window.innerHeight) * 2 + 1;
+      });
+
+      // Animation Loop
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const time = clock.getElapsedTime();
+
+        mouse.x += (mouse.targetX - mouse.x) * 0.05;
+        mouse.y += (mouse.targetY - mouse.y) * 0.05;
+
+        portfolio.rotation.y = mouse.x * 0.6;
+        portfolio.rotation.x = -mouse.y * 0.5;
+        portfolio.position.y = Math.sin(time * 1.2) * 0.08;
+
+        dots.forEach((dot, index) => {
+          dot.position.y += Math.sin(time * 0.7 + index) * 0.0008;
+        });
+
+        glow.position.y = 1.25 + Math.sin(time * 1.5) * 0.08;
+
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      // Resize Handler
+      window.addEventListener("resize", () => {
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      });
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
