@@ -28,7 +28,10 @@
 </head>
 
 <body class="font-[Plus_Jakarta_Sans] bg-[#08080d]">
-  <header>
+ 
+  <main>
+    <section id="home">
+       <header>
     <nav class=" px-5 py-2 md:py-5 lg:px-40 flex justify-between">
       <div class="font-bold text-[20px] md:text-3xl text-white">
         <h1>StuFolio</h1>
@@ -41,14 +44,12 @@
         </ul>
       </div>
       <div class="flex gap-2 md:gap-3.5 lg:gap-6 items-center justify-center">
-        <a class="text-[20px] lg:text-[22px] text-[#7c3aed]" href="#">Login</a>
-        <a href=""
-          class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl">SignUp</a>
+        <a class="text-[20px] lg:text-[22px] text-[#7c3aed] login" href="#">Login</a>
+        <a href="#"
+          class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">SignUp</a>
       </div>
     </nav>
   </header>
-  <main>
-    <section id="home">
       <section id="hero" class="mt-10 grid grid-cols-1 lg:grid-cols-2 min-h-130">
         <div class="mx-10 my-3 lg:ml-40">
           <p class="text-[#7c3aed] text-[20px]">✦ Built for students</p>
@@ -65,7 +66,7 @@
           <div class="mt-10">
             <a class="text:[20px] lg:text-[22px] text-[#7c3aed] p-4" href="#">Try Demo</a>
             <a href=""
-              class="lg:text-[22px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl">Get
+              class="lg:text-[22px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">Get
               Started</a>
           </div>
         </div>
@@ -127,7 +128,7 @@
               <h1 class="text-white text-[30px] font-bold">Minimal</h1>
               <p class="text-[#a1a1aa] text-[18px]">Clean & professional</p>
               <a href=""
-                class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Use
+                class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center signup">Use
                 Template</a>
             </div>
           </div>
@@ -138,7 +139,7 @@
                 <h1 class="text-white text-[30px] font-bold">Creative</h1>
                 <p class="text-[#a1a1aa] text-[18px]">Bold & Expressive</p>
                 <a href=""
-                  class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Use
+                  class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center signup">Use
                   Template</a>
               </div>
             </div>
@@ -239,7 +240,7 @@
   <div class="flex flex-col gap-5">
         <h1 class="font-bold text-[20px] md:text-3xl text-white">Build Your Portfolio</h1>
          <a href=""
-              class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl">Create my Portfolio →</a>
+              class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">Create my Portfolio →</a>
   </div>
 </div>
 <hr class="border-[#a1a1aa] mx-4 border-1.5">
@@ -248,6 +249,53 @@
  </div>
       </section>
     </section>
+<section id="auth">
+  <!-- signup -->
+   <section id="signup" class="min-h-screen min-w-screen flex justify-center items-center" >
+    <div class="min-w-80 md:min-w-124 min-h-auto bg-[#5727a9] rounded-lg px-6 py-3 lg:px-8 lg:py-4 shadow-lg shadow-[#7c3aed]">
+      <h1 class="text-white text-[28px] font-bold text-center">Create Your <span class="text-[#7c3aed]">Stufolio</span></h1>
+       <p class="text-[#aaaab2] text-[18px] lg:text-[20px] text-center">Start building your student portfolio today.
+            </p>
+<form action="">
+  <div class="flex flex-col m-1 lg:m-3">
+    <label for="name" class="text-white text-[20px] font-bold my-2">Full Name</label>
+    <input type="text" name="fullname" id="name" placeholder="e.g. John Doe" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+        <label for="email" class="text-white text-[20px] font-bold my-2">Email Address</label>
+    <input type="email" name="email" id="email" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+    <label for="password" class="text-white text-[20px] font-bold my-2">Password</label>
+    <input type="password" name="password" id="password" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+    <button class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+  </div>
+</form>
+<h1 class="text-center">Already Have an account <a class="text-[#8B5CF6] underline hover:text-[#A78BFA]">
+  Login
+</a></h1>
+          </div>
+   </section>
+
+<!-- login -->
+
+    <section id="login" class="min-h-screen min-w-screen flex justify-center items-center">
+    <div class="min-w-80 md:min-w-124 min-h-auto bg-[#5727a9] rounded-lg px-6 py-3 lg:px-8 lg:py-4 shadow-lg shadow-[#7c3aed]">
+      <h1 class="text-white text-[28px] font-bold text-center">Welcome back to <span class="text-[#7c3aed]">Stufolio</span></h1>
+       <p class="text-[#aaaab2] text-[18px] lg:text-[20px] text-center">Welcome back! Let’s get you back to building. 🚀
+            </p>
+<form action="">
+  <div class="flex flex-col m-1 lg:m-3">
+        <label for="email" class="text-white text-[20px] font-bold my-1">Email Address</label>
+    <input type="email" name="email" id="email" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <label for="password" class="text-white text-[20px] font-bold my-1">Password</label>
+    <input type="password" name="password" id="password" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <button class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+  </div>
+</form>
+<h1 class="text-center">Don't Have an account<a class="text-[#8B5CF6] underline hover:text-[#A78BFA]">
+  signup
+</a></h1>
+          </div>
+   </section>
+</section>
+
   </main>
   <script>
     const container = document.getElementById("canvas-container");
