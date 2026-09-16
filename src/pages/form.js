@@ -38,6 +38,10 @@ signupform.addEventListener("submit", async (e) => {
       signEmail.value,
       signpassword.value,
     );
+
+  if (!error) {
+    alert("Account created! Please check your email to confirm your account.");
+  }
   } finally {
     signuploader.classList.add("hidden");
     signBtn.disabled = false;
