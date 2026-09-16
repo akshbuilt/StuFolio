@@ -1,20 +1,35 @@
 import "./style.css";
 import * as THREE from "three";
 const home = document.getElementById("home");
-const auth = document.getElementById("auth");
-const signupBtn = document.querySelector(".signup");
-const loginBtn = document.querySelector(".login");
-
-function showSection(section) {
-  let sections = [home, auth];
-  sections.forEach((element) => {
+const signup = document.getElementById("signup");
+const login = document.getElementById("login")
+const signupBtn = document.querySelectorAll(".signup");
+const loginBtn = document.querySelectorAll(".login");
+ let sections = [ signup, login];
+  sections.forEach(element => {
     element.classList.add("hidden");
   });
-  const targetSection = document.getElementById(section);
-  targetSection.classList.remove("hidden");
+function showSection(sectionId) {
+let sections = [home, signup, login];
+  sections.forEach(element => {
+    element.classList.add("hidden");
+  });
+  const targetSection = document.getElementById(sectionId);
+  if (targetSection) {
+    targetSection.classList.remove("hidden");
+  }
 }
-showSection("home")
 
-signupBtn.addEventListener("click", () => {
-  showSection("auth");
+signupBtn.forEach(signUpBtn => {
+  signUpBtn.addEventListener("click", () => {
+    showSection("signup")
+  })
 });
+
+loginBtn.forEach(logInButton => {
+  logInButton.addEventListener("click", () => {
+    showSection("login")
+  })
+})
+
+
