@@ -214,7 +214,7 @@
   </div>
 </div>
       </section>
-      <section id="footer" class="border-t-2 border-t-white bg-[#14141c]">
+      <section id="footer" class="border-t border-t-gray-200 bg-[#14141c]">
 <div class="min-h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-10 lg:mx-24 my-10 gap-10">
   <div>
 <h2 class="font-bold text-[20px] md:text-3xl text-white">Stufolio</h2>
@@ -255,7 +255,7 @@
       <h1 class="text-white text-[28px] font-bold text-center">Create Your <span class="text-[#7c3aed]">Stufolio</span></h1>
        <p class="text-[#aaaab2] text-[18px] lg:text-[20px] text-center">Start building your student portfolio today.
             </p>
-<form action="">
+<form action="src/pages/form.js" id="signupform">
   <div class="flex flex-col m-1 lg:m-3">
     <label for="name" class="text-white text-[20px] font-bold my-2">Full Name</label>
     <input type="text" name="fullname" id="name" placeholder="e.g. John Doe" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
@@ -263,8 +263,41 @@
     <input type="email" name="email" id="email" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
     <label for="password" class="text-white text-[20px] font-bold my-2">Password</label>
     <input type="password" name="password" id="password" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
-    <button class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+    <button type="submit" id="signbtn" class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
   </div>
+<div id="signupLoader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+      Creating account...
+    </p>
+  </div>
+</div>
 </form>
 <h1 class="text-center">Already Have an account <a class="text-[#8B5CF6] underline hover:text-[#A78BFA] login" href="#login">
   Login
@@ -279,14 +312,47 @@
       <h1 class="text-white text-[28px] font-bold text-center">Welcome back to <span class="text-[#7c3aed]">Stufolio</span></h1>
        <p class="text-[#aaaab2] text-[18px] lg:text-[20px] text-center">Welcome back! Let’s get you back to building. 🚀
             </p>
-<form action="">
+<form action="src/pages/form.js" id="loginform">
   <div class="flex flex-col m-1 lg:m-3">
         <label for="email" class="text-white text-[20px] font-bold my-1">Email Address</label>
-    <input type="email" name="email" id="email" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <input type="email" name="email" id="loginemail" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
     <label for="password" class="text-white text-[20px] font-bold my-1">Password</label>
-    <input type="password" name="password" id="password" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
-    <button class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+    <input type="password" name="password" id="loginpassword" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <button type="submit" id="loginbtn" class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
   </div>
+  <div id="loginloader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+Signing you in...
+    </p>
+  </div>
+</div>
 </form>
 <h1 class="text-center">Don't Have an account<a class="text-[#8B5CF6] underline hover:text-[#A78BFA] signup" href="#signup">
   signup
@@ -483,6 +549,7 @@
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     });
   </script>
+  <script type="module" src="/src/pages/form.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>
 
