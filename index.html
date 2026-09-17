@@ -359,6 +359,197 @@ Signing you in...
 </a></h1>
           </div>
    </section>
+   <section id="dashboard">
+    <header>
+      <nav class="flex items-center justify-between px-8 py-5 lg:px-32 lg:py-8">
+        <div class="flex flex-row gap-2 items-center">
+        <h1 class="font-bold text-[26px] md:text-3xl text-white">StuFolio</h1>
+ 
+      <ul class="hidden lg:flex  list-none">
+  <li><a href="#" class="text-[20px] p-4 text-[#a1a1aa]">Dashboard</a></li>
+</ul></div>
+  
+         <div class="flex flex-row items-center gap-2 lg:gap-4">
+        <h1 id="username" class="px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-white lg:text-2xl text-20px"></h1>
+         <a href="#" id="logout"
+          class="lg:text-[22px] text-[20px] text-[#7c3aed] hover:text-[#A78BFA]">Logout</a>
+      </div>
+      </nav>
+    </header>
+    <section id="dashmain" class="min-h-auto min-w-full">
+      <div class="flex flex-col items-center gap-3">
+      <h1 class="p-5 text-[28px] lg:text-[40px] text-center text-white font-bold [text-shadow:0_0_20px_rgba(124,58,237,0.35)">Welcome back, <span id="dashmainname"></span>👋 <br>
+ Create something you're proud of.</h1>
+  <a href="#"
+          class="lg:text-[20px] text-[18px] text-center max-w-max text-white py-1.5 px-3 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-xl shadow-md shadow-purple-500 hover:bg-purple-500 transition templates">+ Create My Portfolio</a>
+          </div>
+    </section>
+         <h1 class="font-bold text-3xl text-white text-left px-8 lg:px-32 my-6 lg:my-12">My Portfolio</h1>
+         <div class="mx-8 lg:mx-32 my-10 lg:my-14">
+<div class="w-full rounded-2xl border-2 border-dashed border-white/10 bg-white/2 p-12 text-center transition-all hover:border-[#A78BFA]">
+  <!-- Center Icon -->
+  <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-500/10 text-purple-400">
+    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+    </svg>
+  </div>
+
+  <!-- Text Section -->
+  <h3 class="text-xl font-semibold text-white">No portfolios yet</h3>
+  <p class="mt-1 text-sm text-gray-400">Create your first student portfolio to show off your work.</p>
+
+  <!-- CTA Button inside Full Width Box -->
+  <button class="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#7c3aed] px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:bg-purple-500 active:scale-95">
+    <span>+</span> Create Portfolio
+  </button>
+</div>
+</div>
+          <div id="logoutloader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+      Logging out...
+    </p>
+  </div>
+</div>
+    </section>
+    <!-- Minimal Section Start -->
+<section id="minimal" class="bg-[#EBEBEB] text-black min-h-screen flex flex-col justify-between p-6 selection:bg-black selection:text-white font-sans">
+
+  <!-- Navigation Bar -->
+  <nav class="min-w-max w-full lg:px-36 py-4 flex items-center justify-between">
+    <div class="text-2xl font-bold">Username</div>
+    <div class="flex items-center gap-3 md:gap-6 text-sm font-medium">
+      <a href="mailto:example@gmail.com" class="border border-black px-4 py-1 md:text-xl rounded-lg hover:bg-black hover:text-white transition-all flex items-center justify-center">Email</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center my-12 px-4">
+    <p class="text-lg md:text-xl font-medium text-gray-700 mb-1">Student | Developer</p>
+    <h1 class=" text-[40px] md:text-[56px] mb-3 font-extrabold">Akshit Singh</h1>
+    <p class="text-md md:text-base text-gray-700 max-w-md mx-auto mb-6">
+      Hi, I'm Akshit Singh, a middle School Student and a web dveloper.
+    </p>
+    <a href="#contact" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm">
+      Message Me
+    </a>
+  </header>
+
+  <!-- Main Content & Connect Box -->
+  <div class="max-w-3xl w-full mx-auto px-2 mb-16 space-y-12">
+    
+    <!-- About Paragraph (Monospace font style) -->
+    <p class="font-mono text-base text:lg md:text-xl leading-relaxed text-gray-900 tracking-tight">
+      I’m a curious and passionate learner who enjoys exploring technology, building new things, and continuously improving my skills. I love turning ideas into simple, useful experiences and learning something new with every project I take on.
+    </p>
+
+    <!-- Dashed Full Width Box (Wants To Connect?) -->
+    <div class="w-full border-2 border-dashed border-black rounded-2xl p-8 text-center bg-transparent">
+      <h2 class="text-2xl font-bold mb-1">Wants To Connect?</h2>
+      <p class="text-md text-gray-700 mb-5">Let’s build something together.</p>
+      <a href="#connect" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm">
+        Let’s Connect
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-sm font-medium text-gray-800">
+    Made with <span class="text-purple-600 text-base">💜</span> using StuFolio
+  </footer>
+
+</section>
+<!-- Modern Dark Theme Section Start -->
+<section id="modern" class="bg-[#09070D] text-white min-h-screen flex flex-col justify-between p-6 sm:p-10 font-sans selection:bg-purple-600 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <nav class="max-w-4xl w-full mx-auto py-4 flex items-center justify-between">
+    <div class="text-2xl font-bold ">Username</div>
+    <a href="#contact" class="inline-flex items-center gap-1.5 border border-white/40 px-5 py-2 rounded-xl text-sm font-semibold hover:border-white hover:bg-white hover:text-black transition-all">
+      Contact ↗
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="max-w-4xl w-full mx-auto my-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+    <!-- Left Column (Text) -->
+    <div class="md:col-span-8 space-y-3">
+      <p class="text-xl sm:text-2xl font-semibold text-gray-200">Hello, I’m</p>
+      <h1 class="text-[80px] lg:text-[110px] font-bold text-[#7C3AED] leading-none ">
+        Akshit<br />Singh.
+      </h1>
+      <p class="text-xl sm:text-2xl font-semibold text-gray-200 pt-2">Student | Developer</p>
+      <p class="text-base sm:text-lg text-gray-300">I love to build things with code.</p>
+      
+      <div class="pt-2">
+        <a href="#message" class="inline-block bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-sm font-bold px-7 py-3 rounded-xl transition-all shadow-lg shadow-purple-600/30">
+          Message Me
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column (4-Pointed Star Icon) -->
+    <div class="md:col-span-4 flex justify-center md:justify-end">
+      <svg class="w-60 h-60 sm:w-56 sm:h-56 text-[#7C3AED]" viewBox="0 0 200 200" fill="currentColor">
+        <path d="M100 0 C100 55 145 100 200 100 C145 100 100 145 100 200 C100 145 55 100 0 100 C55 100 100 55 100 0 Z"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Main Content & Connect Box -->
+  <div class="max-w-4xl w-full mx-auto mb-16 space-y-12">
+    
+    <!-- About Paragraph (Monospace) -->
+    <p class="font-mono text-base sm:text-lg leading-relaxed text-gray-300 tracking-tight">
+      I’m a curious and passionate learner who enjoys exploring technology, building new things, and continuously improving my skills. I love turning ideas into simple, useful experiences and learning something new with every project I take on.
+    </p>
+
+    <!-- Purple Solid Dashed Box (Wants To Connect?) -->
+    <div class="w-full bg-[#7C3AED] border-2 border-dashed border-purple-300 rounded-2xl p-8 sm:p-10 text-center shadow-xl">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">Wants To Connect?</h2>
+      <p class="text-sm sm:text-base text-purple-100 mb-6 font-medium">Let’s build something together.</p>
+      <a href="#message" class="inline-block bg-black text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-xl hover:bg-gray-900 transition-all shadow-md">
+        Message Me
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-sm font-semibold text-gray-300">
+    Made with <span class="text-purple-400 text-base">💜</span> using StuFolio
+  </footer>
+
+</section>
+<!-- Modern Dark Theme Section End -->
+   </section>
 </section>
 
   </main>
@@ -549,7 +740,8 @@ Signing you in...
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     });
   </script>
-  <script type="module" src="/src/pages/form.js"></script>
+    <script type="module" src="/src/pages/form.js"></script>
+  <script type="module" src="/src/pages/dashboard.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>
 

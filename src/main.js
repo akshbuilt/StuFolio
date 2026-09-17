@@ -3,14 +3,15 @@ import * as THREE from "three";
 const home = document.getElementById("home");
 const signup = document.getElementById("signup");
 const login = document.getElementById("login")
+const dashboard = document.getElementById("dashboard")
 const signupBtn = document.querySelectorAll(".signup");
 const loginBtn = document.querySelectorAll(".login");
- let sections = [ signup, login];
+ let sections = [ signup, login, dashboard];
   sections.forEach(element => {
     element.classList.add("hidden");
   });
-function showSection(sectionId) {
-let sections = [home, signup, login];
+export function showSection(sectionId) {
+let sections = [home, signup, login, dashboard];
   sections.forEach(element => {
     element.classList.add("hidden");
   });

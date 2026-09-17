@@ -1,5 +1,5 @@
 import { supabase } from "../services/supabase.js";
-
+import { showSection } from "../main.js";
 let signName = document.getElementById("name");
 const signEmail = document.getElementById("email");
 const signpassword = document.getElementById("password");
@@ -39,8 +39,8 @@ signupform.addEventListener("submit", async (e) => {
       signpassword.value,
     );
 
-  if (!error) {
-    alert("Account created! Please check your email to confirm your account.");
+  if (!error && data.session) {
+    showSection("dashboard");
   }
   } finally {
     signuploader.classList.add("hidden");
@@ -75,9 +75,13 @@ loginform.addEventListener("submit", async (e) => {
   loginbtn.textContent = "Submitting";
   try {
     const { data, error } = await login(loginemail.value, loginpassword.value);
+    if (!error && data.session) {
+      showSection("dashboard")
+    }
   } finally {
     loginloader.classList.add("hidden");
     loginbtn.disabled = false;
     loginbtn.textContent = "Submit";
+    
   }
 });
