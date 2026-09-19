@@ -45,3 +45,13 @@ async function dynamicName() {
     dashmainname.textContent = name;
 }
 dynamicName()
+
+const dashCreateFirst = document.getElementById("dashcreate1")
+const dashCreateSecond = document.getElementById("dashcreate2")
+
+dashCreateFirst.addEventListener("click", () => {
+    showSection("templates")
+})
+dashCreateSecond.addEventListener("click", () => {
+    showSection("templates")
+})
