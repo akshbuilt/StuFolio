@@ -7,14 +7,16 @@ const dashboard = document.getElementById("dashboard")
 const minimal = document.getElementById('minimal')
 const creative = document.getElementById("creative")
 const templates = document.getElementById("templates")
+const infopage = document.getElementById('infopage')
+const preview = document.getElementById("preview");
 const signupBtn = document.querySelectorAll(".signup");
 const loginBtn = document.querySelectorAll(".login");
- let sections = [ signup, login, dashboard, minimal, creative, templates];
+ let sections = [ signup, login, dashboard, minimal, creative, templates, infopage,preview];
   sections.forEach(element => {
     element.classList.add("hidden");
   });
 export function showSection(sectionId) {
-let sections = [home, signup, login, dashboard, minimal, creative, templates];
+let sections = [home, signup, login, dashboard, minimal, creative, templates, infopage, preview];
   sections.forEach(element => {
     element.classList.add("hidden");
   });

@@ -123,7 +123,7 @@
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 mx-10 my-8 md:mx-20 md:my-10 lg:mx-40 lg:my-14">
           <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
-            <img src="#" alt="templates-minimal" class="w-full h-40 bg-blue-900" />
+            <img src="public/assests/minimal.png.png" alt="templates-minimal" class="object-cover w-full h-40 bg-blue-900" />
             <div class="px-8 py-4">
               <h1 class="text-white text-[30px] font-bold">Minimal</h1>
               <p class="text-[#a1a1aa] text-[18px]">Clean & professional</p>
@@ -134,11 +134,11 @@
           </div>
           <div>
             <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
-              <img src="#signup" alt="templates-creative" class="w-full h-40 bg-yellow-900" />
+              <img src="public/assests/creative.png" alt="templates-creative" class="object-cover w-full h-40 bg-yellow-900" />
               <div class="px-8 py-4">
                 <h1 class="text-white text-[30px] font-bold">Creative</h1>
                 <p class="text-[#a1a1aa] text-[18px]">Bold & Expressive</p>
-                <a href="#signup"
+                <a href="#"
                   class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center signup">Use
                   Template</a>
               </div>
@@ -387,23 +387,11 @@ Signing you in...
          <h1 class="font-bold text-3xl text-white text-left px-8 lg:px-32 my-6 lg:my-12">My Portfolio</h1>
          <div class="mx-8 lg:mx-32 my-10 lg:my-14">
 <div class="w-full rounded-2xl border-2 border-dashed border-white/10 bg-white/2 p-12 text-center transition-all hover:border-[#A78BFA]">
-  <!-- Center Icon -->
-  <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-500/10 text-purple-400">
-    <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-    </svg>
-  </div>
-
-  <!-- Text Section -->
-  <h3 class="text-xl font-semibold text-white">No portfolios yet</h3>
-  <p class="mt-1 text-sm text-gray-400">Create your first student portfolio to show off your work.</p>
-
-  <!-- CTA Button inside Full Width Box -->
-  <a href="#template" id="dashcreate2" class="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#7c3aed] px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-purple-500/25 transition-all hover:bg-purple-500 active:scale-95">
-    <span>+</span> Create Portfolio
-  </a>
+ <div id="portfolioList">
 </div>
 </div>
+</div>
+
           <div id="logoutloader"
      class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
      role="status">
@@ -456,7 +444,7 @@ Signing you in...
     <p class="text-md md:text-base text-gray-700 max-w-md mx-auto mb-6">
       Hi, I'm Akshit Singh, a middle School Student and a web dveloper.
     </p>
-    <a href="#contact" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm">
+    <a href="mailto:example@gmail.com" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm msgmeminimal">
       Message Me
     </a>
   </header>
@@ -473,7 +461,7 @@ Signing you in...
     <div class="w-full border-2 border-dashed border-black rounded-2xl p-8 text-center bg-transparent">
       <h2 class="text-2xl font-bold mb-1">Wants To Connect?</h2>
       <p class="text-md text-gray-700 mb-5">Let’s build something together.</p>
-      <a href="#connect" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm">
+      <a href="mailto:example@gamil.com" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm msgmeminimal2">
         Let’s Connect
       </a>
     </div>
@@ -560,7 +548,7 @@ Signing you in...
               <h1 class="text-white text-[30px] font-bold">Minimal</h1>
               <p class="text-[#a1a1aa] text-[18px]">Clean & professional</p>
               <a href="#"
-                class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center ">Use
+                class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center" id="minimalbtn">Use
                 Template</a>
             </div>
           </div>
@@ -571,12 +559,66 @@ Signing you in...
                 <h1 class="text-white text-[30px] font-bold">Creative</h1>
                 <p class="text-[#a1a1aa] text-[18px]">Bold & Expressive</p>
                 <a href="#"
-                  class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center ">Use
+                  class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center" id="creativebtn">Use
                   Template</a>
               </div>
             </div>
           </div>
  </div>
+</section>
+<section id="infopage" class="min-h-full max-w-full flex justify-center items-center m-10">
+<div class="min-h-auto w-124 bg-[#5727a9] rounded-2xl flex flex-col px-5 md:px-8 py-4">
+ <h1 class="font-bold text-center m-2 text-[26px] md:text-3xl text-white">Tell Us About You</h1>
+                <p class="text-[#a1a1aa] text-[18px] text-center">Tell us about yourself and let StuFolio turn your ideas into a portfolio.</p>
+                <form action="src/pages/infopage.js" id="infoform" class="flex flex-col m-4">
+<label for="infoname" class="font-semibold text-[20px] text-white">Full Name</label>
+<input type="text" name="username" id="infoname" placeholder="e.g. John Doe" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infoemail" class="font-semibold text-[20px] text-white">Email</label>
+<input type="email" name="email" id="infoemail" placeholder="hello123@example.com" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infoProfession" class="font-semibold text-[20px] text-white">Profession</label>
+<input type="text" name="profession" id="infoprofession" placeholder="e.g. Student | Designer | Developer" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infooneliner" class="font-semibold text-[20px] text-white">One liner about You</label>
+<input type="text" name="oneliner" id="infooneliner" placeholder="Hey, I'm [name] ..." class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infoabout" class="font-semibold text-[20px] text-white">About You</label>
+<textarea name="About" id="infoabout" required placeholder="Tell your story, interests, skills, and what you're passionate about…" class="w-full min-h-24 bg-white rounded-xl px-2 py-1"></textarea>
+    <button type="submit" id="infobtn" class="block py-2 text-xl my-4 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+     <div id="infoloader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+Creating your portfolio...
+    </p>
+  </div>
+</div>
+                </form>
+</div>
+</section>
+<section id="preview" class="hidden min-h-screen">
 </section>
 
   </main>
@@ -768,7 +810,10 @@ Signing you in...
     });
   </script>
     <script type="module" src="/src/pages/form.js"></script>
+        <script type="module" src="/src/pages/templates.js"></script>
+        <script type="module" src="src/pages/infopage.js"></script>
   <script type="module" src="/src/pages/dashboard.js"></script>
+  <script type="module" src="/src/pages/preview.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>
 
