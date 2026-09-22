@@ -37,5 +37,11 @@ loginBtn.forEach(logInButton => {
     showSection("login")
   })
 })
+const tryDemo = document.getElementById("tryDemo");
+
+tryDemo.addEventListener("click", () => {
+      localStorage.setItem("demoMode", "true");
+    showSection("templates");
+});
 
 

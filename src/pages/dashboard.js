@@ -4,8 +4,13 @@ import { createPortfolio } from "./preview.js";
 
 const { data: { session } } = await supabase.auth.getSession();
 
-const portfolioId = new URLSearchParams(window.location.search).get("portfolio");
+const params = new URLSearchParams(window.location.search);
 
+const portfolioId =
+    params.get("portfolio") ||
+    (window.location.pathname.startsWith("/p/")
+        ? window.location.pathname.split("/")[2]
+        : null);
 
 // ==============================
 // PORTFOLIO LINK
@@ -18,7 +23,7 @@ if (portfolioId) {
     } catch (error) {
         console.error("Portfolio loading error:", error);
         alert("Portfolio could not be loaded.");
-        showSection("dashboard");
+        showSection("home");
     }
 
 }
@@ -100,6 +105,8 @@ async function dynamicName() {
 
     username.textContent = name;
     dashmainname.textContent = name;
+    username.className("text-[#7c3aed]")
+    dashmainnamename.className("text-[#7c3aed]")
 }
 
 dynamicName();
@@ -143,7 +150,7 @@ async function loadPortfolios() {
     // ZERO PORTFOLIOS
     // ==============================
 
-    if (portfolios === 0) {
+    if (portfolios.length === 0) {
 
         portfolioList.className =
             "w-full rounded-2xl border-2 border-dashed border-white/10 bg-white/2 p-12 text-center transition-all hover:border-[#A78BFA]";
@@ -204,27 +211,21 @@ async function loadPortfolios() {
     // ==============================
 
     portfolioList.className =
-        "w-full rounded-2xl border border-white/10 bg-white/5 p-6";
+        "w-auto flex flex-wrap gap-6 rounded-2xl border border-white/10 bg-white/5 p-6";
 
     portfolioList.innerHTML = "";
 
 
     portfolios.forEach((portfolio) => {
 
-        const url =
-            new URL(window.location.href);
-
-        url.searchParams.set(
-            "portfolio",
-            portfolio.id
-        );
+       const url = `/p/${portfolio.id}`;
 
 
         const card =
             document.createElement("div");
 
         card.className =
-            "flex flex-col md:flex-row md:items-center md:justify-between gap-4 py-4";
+            "flex flex-col w-96 h-auto border border-gray-700 md:items-center md:justify-between gap-4 py-4";
 
 
         card.innerHTML = `
@@ -246,7 +247,7 @@ async function loadPortfolios() {
             </div>
 
             <a
-                href="${url.href}"
+                href="${url}"
                 class="rounded-xl bg-[#7c3aed] px-5 py-2.5 text-white text-center hover:bg-purple-500 transition"
             >
                 Open Portfolio

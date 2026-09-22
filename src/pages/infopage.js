@@ -1,5 +1,5 @@
 import { showSection } from "../main.js";
-import { createPortfolio } from "./preview.js";
+import { createPortfolio, createDemoPortfolio } from "./preview.js";
 import { supabase } from "../services/supabase.js"
 
 const username = document.getElementById("infoname");
@@ -18,27 +18,56 @@ infoform.addEventListener("submit", async (e) => {
 console.log("Selected:", selectedTemplate);
 
 try {
+  const demoMode = localStorage.getItem("demoMode");
+  if (demoMode) {
+    const demoPortfolio = {
+        name: username.value,
+        email: infoemail.value,
+        profession: infoprofession.value,
+        one_liner: infooneliner.value,
+        about: infoabout.value,
+        template: selectedTemplate
+    };
+
+    console.log("Demo portfolio:", demoPortfolio);
+
+    localStorage.removeItem("demoMode");
+
+createDemoPortfolio(demoPortfolio);
+    return;
+}
       infoloader.classList.remove("hidden")
   infobtn.disabled = true;
   infobtn.textContent = "Submitting"
-   const { data, error } = await supabase
-  .from("portfolios")
-  .insert({
+  const { data: { user } } = await supabase.auth.getUser();
+  console.log("CURRENT USER:", user);
+console.log("CURRENT USER ID:", user?.id);
+console.log("INSERT USER ID:", user.id);
+  if (!user) {
+    throw new Error("You must be logged in to create a portfolio.");
+}
+ const portfolioData = {
+    user_id: user.id,
     name: username.value,
     email: infoemail.value,
     profession: infoprofession.value,
     one_liner: infooneliner.value,
     about: infoabout.value,
     template: selectedTemplate
-  })
-  .select("id")
-  .single();
+};
+
+console.log("INSERT DATA:", portfolioData);
+
+const { data, error } = await supabase
+    .from("portfolios")
+    .insert(portfolioData)
+    .select("id")
+    .single();
 
 if (error) throw error;
 
 console.log("Inserted row:", data);
-const url = new URL(window.location.href);
-url.searchParams.set("portfolio", data.id);
+const url = `/p/${data.id}`;
 history.pushState({}, "", url);
 
 await createPortfolio(data.id);

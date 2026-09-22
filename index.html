@@ -24,6 +24,9 @@
       display: block;
       max-width: 100%;
     }
+    *{
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
@@ -38,15 +41,16 @@
       </div>
       <div>
         <ul class="list-none hidden text-[#a1a1aa] lg:flex">
-          <li><a class="text-[20px] p-4" href="#">How it Works</a></li>
-          <li><a class="text-[20px] p-4" href="#">Templates</a></li>
-          <li><a class="text-[20px] p-4" href="#">Features</a></li>
+          <li><a class="text-[20px] p-4 hover:text-gray-200 transition-all" href="#how-it-works">How it Works</a></li>
+          <li><a class="text-[20px] p-4 hover:text-gray-200 transition-all" href="#templates-hero">Templates</a></li>
+          <li><a class="text-[20px] p-4 hover:text-gray-200 transition-all" href="#features">Features</a></li>
+          <li><a class="text-[20px] p-4 hover:text-gray-200 transition-all" href="#Everything-You-Need">All You Need</a></li>
         </ul>
       </div>
       <div class="flex gap-2 md:gap-3.5 lg:gap-6 items-center justify-center">
-        <a class="text-[20px] lg:text-[22px] text-[#7c3aed] login" href="#">Login</a>
+        <a class="text-[20px] lg:text-[22px] hover:text-[#A78BFA] text-[#7c3aed] login" href="#">Login</a>
         <a href="#"
-          class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">SignUp</a>
+          class="lg:text-[20px] text-[18px] hover:bg-purple-500 text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">SignUp</a>
       </div>
     </nav>
   </header>
@@ -64,9 +68,9 @@
             skills, and experiences — without starting from scratch.
           </p>
           <div class="mt-10">
-            <a class="text:[20px] lg:text-[22px] text-[#7c3aed] p-4" href="#">Try Demo</a>
+            <a class="text:[20px] lg:text-[22px] text-[#7c3aed] p-4" href="#" id="tryDemo">Try Demo</a>
             <a href="#"
-              class="lg:text-[22px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">Get
+              class="lg:text-[22px] text-[18px] hover:bg-purple-500 text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">Get
               Started</a>
           </div>
         </div>
@@ -82,7 +86,7 @@
           From idea to portfolio in minutes.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 m-8 md:m-14 lg:m-20">
-          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl">
+          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl transition-all duration-400 hover:-translate-y-2 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10">
             <span class="text-[#7c3aed] text-[40px] font-bold mb-3">01</span>
             <h1 class="text-white text-[28px] text-center font-semibold mb-3">
               Pick a template
@@ -92,7 +96,7 @@
               fits your style.
             </p>
           </div>
-          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl">
+          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl transition-all duration-400 hover:-translate-y-2 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10">
             <span class="text-[#7c3aed] text-[40px] font-bold mb-3">02</span>
             <h1 class="text-white text-center text-[28px] font-semibold mb-3">
               Tell StuFolio about yourself
@@ -102,7 +106,7 @@
               everything you want to showcase.
             </p>
           </div>
-          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl">
+          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl transition-all duration-400 hover:-translate-y-2 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10">
             <span class="text-[#7c3aed] text-[40px] font-bold mb-3">03</span>
             <h1 class="text-white text-center text-[28px] font-semibold mb-3">
               Get your portfolio
@@ -114,7 +118,7 @@
           </div>
         </div>
       </section>
-      <section class="templates">
+      <section id="templates-hero">
         <h1 class="text-white text-[30px] mt-10 text-center font-bold">
           Choose your style.
         </h1>
@@ -122,7 +126,7 @@
           Start with a template designed to make your story stand out.
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 mx-10 my-8 md:mx-20 md:my-10 lg:mx-40 lg:my-14">
-          <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+          <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl transition-all duration-400 hover:-translate-y-2 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10">
             <img src="public/assests/minimal.png.png" alt="templates-minimal" class="object-cover w-full h-40 bg-blue-900" />
             <div class="px-8 py-4">
               <h1 class="text-white text-[30px] font-bold">Minimal</h1>
@@ -133,7 +137,7 @@
             </div>
           </div>
           <div>
-            <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+            <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl transition-all duration-400 hover:-translate-y-2 hover:scale-[1.02] hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10">
               <img src="public/assests/creative.png" alt="templates-creative" class="object-cover w-full h-40 bg-yellow-900" />
               <div class="px-8 py-4">
                 <h1 class="text-white text-[30px] font-bold">Creative</h1>
@@ -154,15 +158,8 @@
           Everything you need to stand out.
         </p>
         <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-x-28 lg:gap-y-14 lg:mx-40 m-10">
-          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
-            <h1 class="text-white text-[24px] font-bold text-left">
-              AI-Powered
-            </h1>
-            <p class="text-[#a1a1aa] text-[18px] text-left">Turn your information into polished, professional portfolio
-              content that truly stands out.
-            </p>
-          </div>
-          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+         
+          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
             <h1 class="text-white text-[24px] font-bold text-left">
               Built for Students
             </h1>
@@ -170,7 +167,7 @@
               in one place.
             </p>
           </div>
-          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
             <h1 class="text-white text-[24px] font-bold text-left">
               Fast & Easy
             </h1>
@@ -178,7 +175,7 @@
               minutes.
             </p>
           </div>
-          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
             <h1 class="text-white text-[24px] font-bold text-left">Share Anywhere
             </h1>
             <p class="text-[#a1a1aa] text-[18px] text-left">One portfolio link for your work, all in one place.
@@ -194,19 +191,19 @@
         <p class="text-[#a1a1aa] text-[18px] text-center">Create a simple, polished portfolio that feels truly yours.
         </p>
 <div class="grid grid-cols-1 gap-16 m-10 lg:grid-cols-3 lg:m-14 lg:gap-20">
-  <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+  <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
 <h1 class="text-white text-[24px] font-bold">
   01 — About You
 </h1>
 <p  class="text-[#a1a1aa] text-[18px] text-left">Tell your story and introduce yourself.</p>
   </div>
-    <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+    <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
 <h1 class="text-white text-[24px] font-bold">
   02 — Your Style
 </h1>
 <p  class="text-[#a1a1aa] text-[18px] text-left">Make your portfolio feel unique with a clean, personal design.</p>
   </div>
-    <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+    <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
 <h1 class="text-white text-[24px] font-bold">
   03 — Call to Action
 </h1>
@@ -223,19 +220,17 @@
   <div>
     <h1 class="font-bold text-[20px] md:text-3xl text-white">Product</h1>
     <ul class="list-none my-3">
-      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Templates</a></li>
-      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Features</a></li>
-      <li><a class="text-[#a1a1aa] text-[18px]" href="#">How it Works</a></li>
-      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Try a Demo</a></li>
+      <li><a class="text-[18px] text-[#a1a1aa] hover:text-gray-200 transition-all" href="#how-it-works">How it Works</a></li>
+         <li><a class="text-[18px] text-[#a1a1aa] hover:text-gray-200 transition-all" href="#templates-hero">Templates</a></li>
+         <li><a class="text-[18px] text-[#a1a1aa] hover:text-gray-200 transition-all" href="#features">Features</a></li>
     </ul>
   </div>
   <div>
     <h1 class="font-bold text-[20px] md:text-3xl text-white">Resources</h1>
      <ul class="list-none my-3">
-      <li><a class="text-[#a1a1aa] text-[18px]" href="#">About</a></li>
-      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Contact</a></li>
-      <li><a class="text-[#a1a1aa] text-[18px]" href="#">GitHub</a></li>
-    </ul>
+          <li><a class="text-[18px] text-[#a1a1aa] hover:text-gray-200 transition-all" href="mailto:akshitcreates9@gmail.com">Contact</a></li>
+     <li><a class="text-[18px] text-[#a1a1aa] hover:text-gray-200 transition-all" href="https://github.com/akshbuilt">Github</a></li>
+        </ul>
   </div>
   <div class="flex flex-col gap-5">
         <h1 class="font-bold text-[20px] md:text-3xl text-white">Build Your Portfolio</h1>
@@ -475,12 +470,12 @@ Signing you in...
 
 </section>
 <!-- Modern Dark Theme Section Start -->
-<section id="creative" class="bg-[#09070D] text-white min-h-screen flex flex-col justify-between p-6 sm:p-10 font-sans selection:bg-purple-600 selection:text-white">
+<section id="creative" class="bg-[#09070D]  text-white min-h-screen flex flex-col justify-between p-6 sm:p-10 font-sans selection:bg-purple-600 selection:text-white">
 
   <!-- Navigation Bar -->
   <nav class="max-w-4xl w-full mx-auto py-4 flex items-center justify-between">
     <div class="text-2xl font-bold ">Username</div>
-    <a href="#contact" class="inline-flex items-center gap-1.5 border border-white/40 px-5 py-2 rounded-xl text-sm font-semibold hover:border-white hover:bg-white hover:text-black transition-all">
+    <a href="mailto:example@gmail.com" class="inline-flex items-center gap-1.5 border border-white/40 px-5 py-2 rounded-xl text-sm font-semibold hover:border-white hover:bg-white hover:text-black transition-all">
       Contact ↗
     </a>
   </nav>
@@ -497,7 +492,7 @@ Signing you in...
       <p class="text-base sm:text-lg text-gray-300">I love to build things with code.</p>
       
       <div class="pt-2">
-        <a href="#message" class="inline-block bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-sm font-bold px-7 py-3 rounded-xl transition-all shadow-lg shadow-purple-600/30">
+        <a href="mailto:example@gmail.com" class="msgmecreative inline-block bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-sm font-bold px-7 py-3 rounded-xl transition-all shadow-lg shadow-purple-600/30">
           Message Me
         </a>
       </div>
@@ -523,7 +518,7 @@ Signing you in...
     <div class="w-full bg-[#7C3AED] border-2 border-dashed border-purple-300 rounded-2xl p-8 sm:p-10 text-center shadow-xl">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">Wants To Connect?</h2>
       <p class="text-sm sm:text-base text-purple-100 mb-6 font-medium">Let’s build something together.</p>
-      <a href="#message" class="inline-block bg-black text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-xl hover:bg-gray-900 transition-all shadow-md">
+      <a href="mailto:example@gmail.com" class="msgmecreative2 inline-block bg-black text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-xl hover:bg-gray-900 transition-all shadow-md">
         Message Me
       </a>
     </div>

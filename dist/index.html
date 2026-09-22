@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <title>Stufolio | Portfolio Builder for Students</title>
+  <style>.hero-right{width:100%;min-width:0;height:600px;position:relative}#three-canvas{width:100%;max-width:100%;height:100%;display:block}</style>
+  <script type="module" crossorigin src="/assets/index-IXaYquab.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-KXBnxB1s.css">
+</head>
+
+<body class="font-[Plus_Jakarta_Sans] bg-[#08080d]">
+ 
+  <main>
+    <section id="home">
+       <header>
+    <nav class=" px-5 py-2 md:py-5 lg:px-40 flex justify-between">
+      <div class="font-bold text-[20px] md:text-3xl text-white">
+        <h1>StuFolio</h1>
+      </div>
+      <div>
+        <ul class="list-none hidden text-[#a1a1aa] lg:flex">
+          <li><a class="text-[20px] p-4" href="#">How it Works</a></li>
+          <li><a class="text-[20px] p-4" href="#">Templates</a></li>
+          <li><a class="text-[20px] p-4" href="#">Features</a></li>
+        </ul>
+      </div>
+      <div class="flex gap-2 md:gap-3.5 lg:gap-6 items-center justify-center">
+        <a class="text-[20px] lg:text-[22px] text-[#7c3aed] login" href="#">Login</a>
+        <a href="#"
+          class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">SignUp</a>
+      </div>
+    </nav>
+  </header>
+      <section id="hero" class="mt-10 grid grid-cols-1 lg:grid-cols-2 min-h-130">
+        <div class="mx-10 my-3 lg:ml-40">
+          <p class="text-[#7c3aed] text-[20px]">✦ Built for students</p>
+          <h1 class="text-[48px] leading-16 lg:text-[66px] text-white font-semibold lg:leading-22">
+            Your work. <br />
+            Your story. <br />
+            Your
+            <span class="text-[54px] lg:text-[80px] text-[#7c3aed] font-bold">StuFolio</span>.
+          </h1>
+          <p class="text-[#a1a1aa] text-[16px] md:text-[20px] mt-5">
+            Create a professional portfolio from your projects, achievements,
+            skills, and experiences — without starting from scratch.
+          </p>
+          <div class="mt-10">
+            <a class="text:[20px] lg:text-[22px] text-[#7c3aed] p-4" href="#">Try Demo</a>
+            <a href="#"
+              class="lg:text-[22px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">Get
+              Started</a>
+          </div>
+        </div>
+        <div class="hero-right" id="canvas-container">
+          <canvas id="three-canvas"></canvas>
+        </div>
+      </section>
+      <section id="how-it-works">
+        <h1 class="text-white text-[30px] text-center font-bold">
+          How It works
+        </h1>
+        <p class="text-[#a1a1aa] text-[18px] text-center">
+          From idea to portfolio in minutes.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 m-8 md:m-14 lg:m-20">
+          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl">
+            <span class="text-[#7c3aed] text-[40px] font-bold mb-3">01</span>
+            <h1 class="text-white text-[28px] text-center font-semibold mb-3">
+              Pick a template
+            </h1>
+            <p class="text-[#a1a1aa] text-[22px] text-center">
+              Start with a professionally designed portfolio template that
+              fits your style.
+            </p>
+          </div>
+          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl">
+            <span class="text-[#7c3aed] text-[40px] font-bold mb-3">02</span>
+            <h1 class="text-white text-center text-[28px] font-semibold mb-3">
+              Tell StuFolio about yourself
+            </h1>
+            <p class="text-[#a1a1aa] text-[22px] text-center">
+              Add your projects, skills, achievements, experience, and
+              everything you want to showcase.
+            </p>
+          </div>
+          <div class="min-h-auto bg-[#14141c] flex items-center flex-col p-8 rounded-xl">
+            <span class="text-[#7c3aed] text-[40px] font-bold mb-3">03</span>
+            <h1 class="text-white text-center text-[28px] font-semibold mb-3">
+              Get your portfolio
+            </h1>
+            <p class="text-[#a1a1aa] text-[22px] text-center">
+              StuFolio turns your information into a polished portfolio you
+              can preview, customize, and share.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="templates">
+        <h1 class="text-white text-[30px] mt-10 text-center font-bold">
+          Choose your style.
+        </h1>
+        <p class="text-[#a1a1aa] text-[18px] text-center">
+          Start with a template designed to make your story stand out.
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 mx-10 my-8 md:mx-20 md:my-10 lg:mx-40 lg:my-14">
+          <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+            <img src="/assets/minimal.png-B80g_IaC.png" alt="templates-minimal" class="object-cover w-full h-40 bg-blue-900" />
+            <div class="px-8 py-4">
+              <h1 class="text-white text-[30px] font-bold">Minimal</h1>
+              <p class="text-[#a1a1aa] text-[18px]">Clean & professional</p>
+              <a href="#"
+                class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center signup">Use
+                Template</a>
+            </div>
+          </div>
+          <div>
+            <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+              <img src="/assets/creative-Plmf7nwh.png" alt="templates-creative" class="object-cover w-full h-40 bg-yellow-900" />
+              <div class="px-8 py-4">
+                <h1 class="text-white text-[30px] font-bold">Creative</h1>
+                <p class="text-[#a1a1aa] text-[18px]">Bold & Expressive</p>
+                <a href="#"
+                  class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center signup">Use
+                  Template</a>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="features">
+        <h1 class="text-white text-[30px] mt-10 text-center font-bold">
+          Why <span class="text-[#7c3aed]">StuFolio</span>
+        </h1>
+        <p class="text-[#a1a1aa] text-[18px] text-center">
+          Everything you need to stand out.
+        </p>
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-x-28 lg:gap-y-14 lg:mx-40 m-10">
+          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+            <h1 class="text-white text-[24px] font-bold text-left">
+              AI-Powered
+            </h1>
+            <p class="text-[#a1a1aa] text-[18px] text-left">Turn your information into polished, professional portfolio
+              content that truly stands out.
+            </p>
+          </div>
+          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+            <h1 class="text-white text-[24px] font-bold text-left">
+              Built for Students
+            </h1>
+            <p class="text-[#a1a1aa] text-[18px] text-left">Showcase your projects, achievements, skills, and more — all
+              in one place.
+            </p>
+          </div>
+          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+            <h1 class="text-white text-[24px] font-bold text-left">
+              Fast & Easy
+            </h1>
+            <p class="text-[#a1a1aa] text-[18px] text-left">Go from a blank page to a polished portfolio in just
+              minutes.
+            </p>
+          </div>
+          <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+            <h1 class="text-white text-[24px] font-bold text-left">Share Anywhere
+            </h1>
+            <p class="text-[#a1a1aa] text-[18px] text-left">One portfolio link for your work, all in one place.
+            </p>
+          </div>
+
+        </div>
+      </section>
+      <section id="Everything-You-Need">
+        <h1 class="text-white text-[30px] mt-10 text-center font-bold">
+          Make It Yours
+        </h1>
+        <p class="text-[#a1a1aa] text-[18px] text-center">Create a simple, polished portfolio that feels truly yours.
+        </p>
+<div class="grid grid-cols-1 gap-16 m-10 lg:grid-cols-3 lg:m-14 lg:gap-20">
+  <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+<h1 class="text-white text-[24px] font-bold">
+  01 — About You
+</h1>
+<p  class="text-[#a1a1aa] text-[18px] text-left">Tell your story and introduce yourself.</p>
+  </div>
+    <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+<h1 class="text-white text-[24px] font-bold">
+  02 — Your Style
+</h1>
+<p  class="text-[#a1a1aa] text-[18px] text-left">Make your portfolio feel unique with a clean, personal design.</p>
+  </div>
+    <div class="min-h-auto bg-[#14141c] flex flex-col  rounded-xl px-8 py-6">
+<h1 class="text-white text-[24px] font-bold">
+  03 — Call to Action
+</h1>
+<p  class="text-[#a1a1aa] text-[18px] text-left">Give visitors a clear way to connect with you.</p>
+  </div>
+</div>
+      </section>
+      <section id="footer" class="border-t border-t-gray-200 bg-[#14141c]">
+<div class="min-h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-10 lg:mx-24 my-10 gap-10">
+  <div>
+<h2 class="font-bold text-[20px] md:text-3xl text-white">Stufolio</h2>
+<p class="text-[#a1a1aa] text-[18px] text-left">Build. Showcase. Stand out.</p>
+  </div>
+  <div>
+    <h1 class="font-bold text-[20px] md:text-3xl text-white">Product</h1>
+    <ul class="list-none my-3">
+      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Templates</a></li>
+      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Features</a></li>
+      <li><a class="text-[#a1a1aa] text-[18px]" href="#">How it Works</a></li>
+      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Try a Demo</a></li>
+    </ul>
+  </div>
+  <div>
+    <h1 class="font-bold text-[20px] md:text-3xl text-white">Resources</h1>
+     <ul class="list-none my-3">
+      <li><a class="text-[#a1a1aa] text-[18px]" href="#">About</a></li>
+      <li><a class="text-[#a1a1aa] text-[18px]" href="#">Contact</a></li>
+      <li><a class="text-[#a1a1aa] text-[18px]" href="#">GitHub</a></li>
+    </ul>
+  </div>
+  <div class="flex flex-col gap-5">
+        <h1 class="font-bold text-[20px] md:text-3xl text-white">Build Your Portfolio</h1>
+         <a href="#"
+              class="lg:text-[20px] text-[18px] text-white py-2 px-4 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-2xl signup">Create my Portfolio →</a>
+  </div>
+</div>
+<hr class="border-[#a1a1aa] mx-4 border-1.5">
+<div class="flex justify-between mx-3">  <h1 class="text-[#a1a1aa] lg:text-[18px] text-[16px] text-left p-4">© 2026 StuFolio. All rights reserved.</h1>
+ <h1 class="text-white lg:text-[18px] text-[16px] text-left p-4">Made with 💜 by Akshit</h1>
+ </div>
+      </section>
+    </section>
+  <!-- signup -->
+   <section id="signup" class="min-h-screen min-w-screen flex justify-center items-center" >
+    <div class="min-w-80 md:min-w-124 min-h-auto bg-[#5727a9] rounded-lg px-6 py-3 lg:px-8 lg:py-4 shadow-lg shadow-[#7c3aed]">
+      <h1 class="text-white text-[28px] font-bold text-center">Create Your <span class="text-[#7c3aed]">Stufolio</span></h1>
+       <p class="text-[#aaaab2] text-[18px] lg:text-[20px] text-center">Start building your student portfolio today.
+            </p>
+<form action="src/pages/form.js" id="signupform">
+  <div class="flex flex-col m-1 lg:m-3">
+    <label for="name" class="text-white text-[20px] font-bold my-2">Full Name</label>
+    <input type="text" name="fullname" id="name" placeholder="e.g. John Doe" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+        <label for="email" class="text-white text-[20px] font-bold my-2">Email Address</label>
+    <input type="email" name="email" id="email" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+    <label for="password" class="text-white text-[20px] font-bold my-2">Password</label>
+    <input type="password" name="password" id="password" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+    <button type="submit" id="signbtn" class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+  </div>
+<div id="signupLoader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+      Creating account...
+    </p>
+  </div>
+</div>
+</form>
+<h1 class="text-center">Already Have an account <a class="text-[#8B5CF6] underline hover:text-[#A78BFA] login" href="#login">
+  Login
+</a></h1>
+          </div>
+   </section>
+
+<!-- login -->
+
+    <section id="login" class="min-h-screen min-w-screen flex justify-center items-center">
+    <div class="min-w-80 md:min-w-124 min-h-auto bg-[#5727a9] rounded-lg px-6 py-3 lg:px-8 lg:py-4 shadow-lg shadow-[#7c3aed]">
+      <h1 class="text-white text-[28px] font-bold text-center">Welcome back to <span class="text-[#7c3aed]">Stufolio</span></h1>
+       <p class="text-[#aaaab2] text-[18px] lg:text-[20px] text-center">Welcome back! Let’s get you back to building. 🚀
+            </p>
+<form action="src/pages/form.js" id="loginform">
+  <div class="flex flex-col m-1 lg:m-3">
+        <label for="email" class="text-white text-[20px] font-bold my-1">Email Address</label>
+    <input type="email" name="email" id="loginemail" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <label for="password" class="text-white text-[20px] font-bold my-1">Password</label>
+    <input type="password" name="password" id="loginpassword" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <button type="submit" id="loginbtn" class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+  </div>
+  <div id="loginloader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+Signing you in...
+    </p>
+  </div>
+</div>
+</form>
+<h1 class="text-center">Don't Have an account<a class="text-[#8B5CF6] underline hover:text-[#A78BFA] signup" href="#signup">
+  signup
+</a></h1>
+          </div>
+   </section>
+   <section id="dashboard">
+    <header>
+      <nav class="flex items-center justify-between px-8 py-5 lg:px-32 lg:py-8">
+        <div class="flex flex-row gap-2 items-center">
+        <h1 class="font-bold text-[26px] md:text-3xl text-white">StuFolio</h1>
+ 
+      <ul class="hidden lg:flex  list-none">
+  <li><a href="#" class="text-[20px] p-4 text-[#a1a1aa]">Dashboard</a></li>
+</ul></div>
+  
+         <div class="flex flex-row items-center gap-2 lg:gap-4">
+        <h1 id="username" class="px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-white lg:text-2xl text-20px"></h1>
+         <a href="#" id="logout"
+          class="lg:text-[22px] text-[20px] text-[#7c3aed] hover:text-[#A78BFA]">Logout</a>
+      </div>
+      </nav>
+    </header>
+    <section id="dashmain" class="min-h-auto min-w-full">
+      <div class="flex flex-col items-center gap-3">
+      <h1 class="p-5 text-[28px] lg:text-[40px] text-center text-white font-bold [text-shadow:0_0_20px_rgba(124,58,237,0.35)">Welcome back, <span id="dashmainname"></span>👋 <br>
+ Create something you're proud of.</h1>
+  <a href="#"
+         id="dashcreate1" class="lg:text-[20px] text-[18px] text-center max-w-max text-white py-1.5 px-3 rounded-xl lg:py-3 lg:px-8 bg-[#7c3aed] lg:rounded-xl shadow-md shadow-purple-500 hover:bg-purple-500 transition templates">+ Create My Portfolio</a>
+          </div>
+    </section>
+         <h1 class="font-bold text-3xl text-white text-left px-8 lg:px-32 my-6 lg:my-12">My Portfolio</h1>
+         <div class="mx-8 lg:mx-32 my-10 lg:my-14">
+<div class="w-full rounded-2xl border-2 border-dashed border-white/10 bg-white/2 p-12 text-center transition-all hover:border-[#A78BFA]">
+ <div id="portfolioList">
+</div>
+</div>
+</div>
+
+          <div id="logoutloader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+      Logging out...
+    </p>
+  </div>
+</div>
+    </section>
+    <!-- Minimal Section Start -->
+<section id="minimal" class="bg-[#EBEBEB] text-black min-h-screen flex flex-col justify-between p-6 selection:bg-black selection:text-white font-sans">
+
+  <!-- Navigation Bar -->
+  <nav class="min-w-max w-full lg:px-36 py-4 flex items-center justify-between">
+    <div class="text-2xl font-bold">Username</div>
+    <div class="flex items-center gap-3 md:gap-6 text-sm font-medium">
+      <a href="mailto:example@gmail.com" class="border border-black px-4 py-1 md:text-xl rounded-lg hover:bg-black hover:text-white transition-all flex items-center justify-center">Email</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="text-center my-12 px-4">
+    <p class="text-lg md:text-xl font-medium text-gray-700 mb-1">Student | Developer</p>
+    <h1 class=" text-[40px] md:text-[56px] mb-3 font-extrabold">Akshit Singh</h1>
+    <p class="text-md md:text-base text-gray-700 max-w-md mx-auto mb-6">
+      Hi, I'm Akshit Singh, a middle School Student and a web dveloper.
+    </p>
+    <a href="mailto:example@gmail.com" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm msgmeminimal">
+      Message Me
+    </a>
+  </header>
+
+  <!-- Main Content & Connect Box -->
+  <div class="max-w-3xl w-full mx-auto px-2 mb-16 space-y-12">
+    
+    <!-- About Paragraph (Monospace font style) -->
+    <p class="font-mono text-base text:lg md:text-xl leading-relaxed text-gray-900 tracking-tight">
+      I’m a curious and passionate learner who enjoys exploring technology, building new things, and continuously improving my skills. I love turning ideas into simple, useful experiences and learning something new with every project I take on.
+    </p>
+
+    <!-- Dashed Full Width Box (Wants To Connect?) -->
+    <div class="w-full border-2 border-dashed border-black rounded-2xl p-8 text-center bg-transparent">
+      <h2 class="text-2xl font-bold mb-1">Wants To Connect?</h2>
+      <p class="text-md text-gray-700 mb-5">Let’s build something together.</p>
+      <a href="mailto:example@gamil.com" class="inline-block bg-black text-white text-xs md:text-sm font-bold px-6 py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-sm msgmeminimal2">
+        Let’s Connect
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-sm font-medium text-gray-800">
+    Made with <span class="text-purple-600 text-base">💜</span> using StuFolio
+  </footer>
+
+</section>
+<!-- Modern Dark Theme Section Start -->
+<section id="creative" class="bg-[#09070D] text-white min-h-screen flex flex-col justify-between p-6 sm:p-10 font-sans selection:bg-purple-600 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <nav class="max-w-4xl w-full mx-auto py-4 flex items-center justify-between">
+    <div class="text-2xl font-bold ">Username</div>
+    <a href="#contact" class="inline-flex items-center gap-1.5 border border-white/40 px-5 py-2 rounded-xl text-sm font-semibold hover:border-white hover:bg-white hover:text-black transition-all">
+      Contact ↗
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="max-w-4xl w-full mx-auto my-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+    <!-- Left Column (Text) -->
+    <div class="md:col-span-8 space-y-3">
+      <p class="text-xl sm:text-2xl font-semibold text-gray-200">Hello, I’m</p>
+      <h1 class="text-[80px] lg:text-[110px] font-bold text-[#7C3AED] leading-none ">
+        Akshit<br />Singh.
+      </h1>
+      <p class="text-xl sm:text-2xl font-semibold text-gray-200 pt-2">Student | Developer</p>
+      <p class="text-base sm:text-lg text-gray-300">I love to build things with code.</p>
+      
+      <div class="pt-2">
+        <a href="#message" class="inline-block bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-sm font-bold px-7 py-3 rounded-xl transition-all shadow-lg shadow-purple-600/30">
+          Message Me
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column (4-Pointed Star Icon) -->
+    <div class="md:col-span-4 flex justify-center md:justify-end">
+      <svg class="w-60 h-60 sm:w-56 sm:h-56 text-[#7C3AED]" viewBox="0 0 200 200" fill="currentColor">
+        <path d="M100 0 C100 55 145 100 200 100 C145 100 100 145 100 200 C100 145 55 100 0 100 C55 100 100 55 100 0 Z"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Main Content & Connect Box -->
+  <div class="max-w-4xl w-full mx-auto mb-16 space-y-12">
+    
+    <!-- About Paragraph (Monospace) -->
+    <p class="font-mono text-base sm:text-lg leading-relaxed text-gray-300 tracking-tight">
+      I’m a curious and passionate learner who enjoys exploring technology, building new things, and continuously improving my skills. I love turning ideas into simple, useful experiences and learning something new with every project I take on.
+    </p>
+
+    <!-- Purple Solid Dashed Box (Wants To Connect?) -->
+    <div class="w-full bg-[#7C3AED] border-2 border-dashed border-purple-300 rounded-2xl p-8 sm:p-10 text-center shadow-xl">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">Wants To Connect?</h2>
+      <p class="text-sm sm:text-base text-purple-100 mb-6 font-medium">Let’s build something together.</p>
+      <a href="#message" class="inline-block bg-black text-white text-xs sm:text-sm font-bold px-7 py-3 rounded-xl hover:bg-gray-900 transition-all shadow-md">
+        Message Me
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center text-sm font-semibold text-gray-300">
+    Made with <span class="text-purple-400 text-base">💜</span> using StuFolio
+  </footer>
+
+</section>
+<!-- Modern Dark Theme Section End -->
+   </section>
+</section>
+<section id="templates" class="min-h-full max-w-full">
+ <h1 class="font-bold text-center m-8 text-[30px] md:text-4xl text-white">Choose Your Template 💜</h1>
+ <div class="grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-24 py-8 gap-10">
+<div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+            <img src="/assets/minimal.png-B80g_IaC.png" alt="templates-minimal" class=" object-cover object-center w-full h-40 bg-blue-900" />
+            <div class="px-8 py-4">
+              <h1 class="text-white text-[30px] font-bold">Minimal</h1>
+              <p class="text-[#a1a1aa] text-[18px]">Clean & professional</p>
+              <a href="#"
+                class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center" id="minimalbtn">Use
+                Template</a>
+            </div>
+          </div>
+            <div>
+            <div class="min-h-auto bg-[#14141c] flex flex-col rounded-xl">
+              <img src="/assets/creative-Plmf7nwh.png" alt="templates-creative" class=" object-cover object-center w-full h-40 bg-yellow-900" />
+              <div class="px-8 py-4">
+                <h1 class="text-white text-[30px] font-bold">Creative</h1>
+                <p class="text-[#a1a1aa] text-[18px]">Bold & Expressive</p>
+                <a href="#"
+                  class="block py-2 text-xl mt-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center" id="creativebtn">Use
+                  Template</a>
+              </div>
+            </div>
+          </div>
+ </div>
+</section>
+<section id="infopage" class="min-h-full max-w-full flex justify-center items-center m-10">
+<div class="min-h-auto w-124 bg-[#5727a9] rounded-2xl flex flex-col px-5 md:px-8 py-4">
+ <h1 class="font-bold text-center m-2 text-[26px] md:text-3xl text-white">Tell Us About You</h1>
+                <p class="text-[#a1a1aa] text-[18px] text-center">Tell us about yourself and let StuFolio turn your ideas into a portfolio.</p>
+                <form action="src/pages/infopage.js" id="infoform" class="flex flex-col m-4">
+<label for="infoname" class="font-semibold text-[20px] text-white">Full Name</label>
+<input type="text" name="username" id="infoname" placeholder="e.g. John Doe" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infoemail" class="font-semibold text-[20px] text-white">Email</label>
+<input type="email" name="email" id="infoemail" placeholder="hello123@example.com" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infoProfession" class="font-semibold text-[20px] text-white">Profession</label>
+<input type="text" name="profession" id="infoprofession" placeholder="e.g. Student | Designer | Developer" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infooneliner" class="font-semibold text-[20px] text-white">One liner about You</label>
+<input type="text" name="oneliner" id="infooneliner" placeholder="Hey, I'm [name] ..." class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
+<label for="infoabout" class="font-semibold text-[20px] text-white">About You</label>
+<textarea name="About" id="infoabout" required placeholder="Tell your story, interests, skills, and what you're passionate about…" class="w-full min-h-24 bg-white rounded-xl px-2 py-1"></textarea>
+    <button type="submit" id="infobtn" class="block py-2 text-xl my-4 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
+     <div id="infoloader"
+     class="hidden fixed inset-0 z-50 backdrop-blur-md bg-black/40 flex items-center justify-center"
+     role="status">
+
+  <div class="text-center">
+    <svg
+      class="mx-auto size-8 animate-spin text-indigo-400"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        class="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        stroke-width="4"
+      ></circle>
+
+      <path
+        class="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+
+    <p class="mt-4 font-medium text-white">
+Creating your portfolio...
+    </p>
+  </div>
+</div>
+                </form>
+</div>
+</section>
+<section id="preview" class="hidden min-h-screen">
+</section>
+
+  </main>
+  <script>
+    const container = document.getElementById("canvas-container");
+    const canvas = document.getElementById("three-canvas");
+
+    const scene = new THREE.Scene();
+
+    const camera = new THREE.PerspectiveCamera(
+      45,
+      container.clientWidth / container.clientHeight,
+      0.1,
+      100,
+    );
+    camera.position.set(0, 0, 6);
+
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      antialias: true,
+      alpha: true,
+    });
+
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.outputEncoding = THREE.sRGBEncoding;
+
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.55);
+    scene.add(ambientLight);
+
+    const purpleLight = new THREE.PointLight(0x7c3aed, 3, 15);
+    purpleLight.position.set(4, 3, 5);
+    scene.add(purpleLight);
+
+    const violetLight = new THREE.PointLight(0xa78bfa, 1.5, 12);
+    violetLight.position.set(-6, -20, 3);
+    scene.add(violetLight);
+
+    // Group
+    const portfolio = new THREE.Group();
+    scene.add(portfolio);
+
+    // Main Card
+    const cardGeometry = new THREE.BoxGeometry(5.5, 2.25, 0.28);
+    const cardMaterial = new THREE.MeshStandardMaterial({
+      color: 0x14141c,
+      roughness: 0.3,
+      metalness: 0.35,
+    });
+    const card = new THREE.Mesh(cardGeometry, cardMaterial);
+    portfolio.add(card);
+
+    // Inner Panel
+    const panelGeometry = new THREE.BoxGeometry(5.9, 2.8, 0.08);
+    const panelMaterial = new THREE.MeshStandardMaterial({
+      color: 0x0f0f17,
+      roughness: 0.45,
+      metalness: 0.15,
+    });
+    const panel = new THREE.Mesh(panelGeometry, panelMaterial);
+    panel.position.z = 0.19;
+    portfolio.add(panel);
+
+    // Avatar
+    const avatarGeometry = new THREE.CircleGeometry(0.42, 32);
+    const avatarMaterial = new THREE.MeshStandardMaterial({
+      color: 0x7c3aed,
+      emissive: 0x3b0764,
+      emissiveIntensity: 0.7,
+    });
+    const avatar = new THREE.Mesh(avatarGeometry, avatarMaterial);
+    avatar.position.set(-1.65, 0.85, 0.27);
+    portfolio.add(avatar);
+
+    // Text Bars Helper
+    function createBar(width, height, color, x, y, z = 0.27) {
+      const geometry = new THREE.BoxGeometry(width, height, 0.05);
+      const material = new THREE.MeshStandardMaterial({
+        color: color,
+        roughness: 0.5,
+      });
+      const mesh = new THREE.Mesh(geometry, material);
+      mesh.position.set(x, y, z);
+      portfolio.add(mesh);
+      return mesh;
+    }
+
+    createBar(1.35, 0.14, 0xfafafa, -0.45, 0.98);
+    createBar(0.95, 0.09, 0xa1a1aa, -0.65, 0.7);
+
+    // Project Cards Helper
+    function createProjectCard(x, y) {
+      const geometry = new THREE.BoxGeometry(1.15, 0.85, 0.08);
+      const material = new THREE.MeshStandardMaterial({
+        color: 0x14141c,
+        roughness: 0.4,
+        metalness: 0.2,
+      });
+      const project = new THREE.Mesh(geometry, material);
+      project.position.set(x, y, 0.27);
+      portfolio.add(project);
+
+      const thumbnailGeometry = new THREE.BoxGeometry(0.85, 0.32, 0.04);
+      const thumbnailMaterial = new THREE.MeshStandardMaterial({
+        color: 0x7c3aed,
+        emissive: 0x3b0764,
+        emissiveIntensity: 0.45,
+      });
+      const thumbnail = new THREE.Mesh(thumbnailGeometry, thumbnailMaterial);
+      thumbnail.position.set(x, y + 0.15, 0.34);
+      portfolio.add(thumbnail);
+
+      createBar(0.55, 0.07, 0xfafafa, x - 0.12, y - 0.15, 0.35);
+    }
+
+    createProjectCard(-1.55, -0.45);
+    createProjectCard(-0.25, -0.45);
+    createProjectCard(1.05, -0.45);
+
+    // Glow Orb
+    const glowGeometry = new THREE.SphereGeometry(0.65, 32, 32);
+    const glowMaterial = new THREE.MeshBasicMaterial({
+      color: 0x7c3aed,
+      transparent: true,
+      opacity: 0.18,
+    });
+    const glow = new THREE.Mesh(glowGeometry, glowMaterial);
+    glow.position.set(1.9, 1.25, -0.3);
+    portfolio.add(glow);
+
+    // Floating Dots
+    const dotMaterial = new THREE.MeshBasicMaterial({ color: 0xa78bfa });
+    const dots = [];
+    for (let i = 0; i < 7; i++) {
+      const dotGeometry = new THREE.SphereGeometry(
+        0.035 + Math.random() * 0.025,
+        16,
+        16,
+      );
+      const dot = new THREE.Mesh(dotGeometry, dotMaterial);
+      dot.position.set(
+        (Math.random() - 0.5) * 6,
+        (Math.random() - 0.5) * 4,
+        0.2,
+      );
+      scene.add(dot);
+      dots.push(dot);
+    }
+
+    // Mouse Tracking
+    const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+    window.addEventListener("mousemove", (event) => {
+      mouse.targetX = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.targetY = -(event.clientY / window.innerHeight) * 2 + 1;
+    });
+
+    // Animation Loop
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      const time = clock.getElapsedTime();
+
+      mouse.x += (mouse.targetX - mouse.x) * 0.05;
+      mouse.y += (mouse.targetY - mouse.y) * 0.05;
+
+      portfolio.rotation.y = mouse.x * 0.6;
+      portfolio.rotation.x = -mouse.y * 0.5;
+      portfolio.position.y = Math.sin(time * 1.2) * 0.08;
+
+      dots.forEach((dot, index) => {
+        dot.position.y += Math.sin(time * 0.7 + index) * 0.0008;
+      });
+
+      glow.position.y = 1.25 + Math.sin(time * 1.5) * 0.08;
+
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Resize Handler
+    window.addEventListener("resize", () => {
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
+  </script>
+</body>
+
+</html>
