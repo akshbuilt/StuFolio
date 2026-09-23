@@ -13,7 +13,6 @@ export async function createPortfolio(id) {
 
   if (error) throw error;
 
-  console.log("Portfolio from DB:", portfolio);
 
   if (portfolio.template === "minimal") {
 
@@ -140,6 +139,5 @@ document.body.appendChild(demoBanner);
 
     showSection("creative");
 
-    console.log("Demo Creative portfolio rendered ✅");
   }
 }

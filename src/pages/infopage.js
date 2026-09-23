@@ -15,7 +15,6 @@ const infoform = document.getElementById("infoform");
 infoform.addEventListener("submit", async (e) => {
   e.preventDefault();
   const selectedTemplate = localStorage.getItem("selectedTemplate");
-console.log("Selected:", selectedTemplate);
 
 try {
   const demoMode = localStorage.getItem("demoMode");
@@ -29,7 +28,6 @@ try {
         template: selectedTemplate
     };
 
-    console.log("Demo portfolio:", demoPortfolio);
 
     localStorage.removeItem("demoMode");
 
@@ -40,9 +38,7 @@ createDemoPortfolio(demoPortfolio);
   infobtn.disabled = true;
   infobtn.textContent = "Submitting"
   const { data: { user } } = await supabase.auth.getUser();
-  console.log("CURRENT USER:", user);
-console.log("CURRENT USER ID:", user?.id);
-console.log("INSERT USER ID:", user.id);
+
   if (!user) {
     throw new Error("You must be logged in to create a portfolio.");
 }
@@ -56,7 +52,6 @@ console.log("INSERT USER ID:", user.id);
     template: selectedTemplate
 };
 
-console.log("INSERT DATA:", portfolioData);
 
 const { data, error } = await supabase
     .from("portfolios")
@@ -66,7 +61,6 @@ const { data, error } = await supabase
 
 if (error) throw error;
 
-console.log("Inserted row:", data);
 const url = `/p/${data.id}`;
 history.pushState({}, "", url);
 

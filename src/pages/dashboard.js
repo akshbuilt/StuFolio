@@ -29,31 +29,17 @@ if (portfolioId) {
 }
 
 
-// ==============================
-// NORMAL SESSION ROUTING
-// ==============================
-
 else if (session) {
 
     showSection("dashboard");
 
 }
 
-
-// ==============================
-// NOT LOGGED IN
-// ==============================
-
 else {
 
     showSection("home");
 
 }
-
-
-// ==============================
-// LOGOUT
-// ==============================
 
 const logoutbtn = document.getElementById("logout");
 const logoutloader = document.getElementById("logoutloader");
@@ -87,10 +73,6 @@ logoutbtn.addEventListener("click", async () => {
 });
 
 
-// ==============================
-// USERNAME
-// ==============================
-
 const username = document.getElementById("username");
 const dashmainname = document.getElementById("dashmainname");
 
@@ -105,16 +87,11 @@ async function dynamicName() {
 
     username.textContent = name;
     dashmainname.textContent = name;
-    username.className("text-[#7c3aed]")
-    dashmainnamename.className("text-[#7c3aed]")
+    dashmainname.className = "text-[#7c3aed]";
 }
 
 dynamicName();
 
-
-// ==============================
-// PORTFOLIOS
-// ==============================
 
 const portfolioList =
     document.getElementById("portfolioList");
@@ -144,11 +121,6 @@ async function loadPortfolios() {
         );
         return;
     }
-
-
-    // ==============================
-    // ZERO PORTFOLIOS
-    // ==============================
 
     if (portfolios.length === 0) {
 
@@ -204,14 +176,8 @@ async function loadPortfolios() {
 
         return;
     }
-
-
-    // ==============================
-    // ONE OR MORE PORTFOLIOS
-    // ==============================
-
     portfolioList.className =
-        "w-auto flex flex-wrap gap-6 rounded-2xl border border-white/10 bg-white/5 p-6";
+        "w-auto flex flex-wrap gap-10 rounded-2xl border border-white/10 bg-white/5 p-6";
 
     portfolioList.innerHTML = "";
 
@@ -225,14 +191,14 @@ async function loadPortfolios() {
             document.createElement("div");
 
         card.className =
-            "flex flex-col w-96 h-auto border border-gray-700 md:items-center md:justify-between gap-4 py-4";
+            "flex flex-col w-106 h-auto border border-gray-700 rounded-lg md:items-center md:justify-between gap-4 py-4";
 
 
         card.innerHTML = `
 
             <div>
 
-                <h3 class="text-xl font-semibold text-white">
+                <h3 class=" text-lg md:text-xl font-semibold text-white">
                     ${portfolio.name}
                 </h3>
 
@@ -248,7 +214,7 @@ async function loadPortfolios() {
 
             <a
                 href="${url}"
-                class="rounded-xl bg-[#7c3aed] px-5 py-2.5 text-white text-center hover:bg-purple-500 transition"
+                class="rounded-xl bg-[#7c3aed] px-3 py-1.5 md:px-5 mx-2 md:py-2.5 text-white text-center hover:bg-purple-500 transition"
             >
                 Open Portfolio
             </a>

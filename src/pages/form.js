@@ -20,7 +20,7 @@ async function signup(name, signupemail, signuppassword) {
 
   if (error) {
     alert(error.message);
-    return;
+    return {data: null, error};
   }
 
   return { data, error };
@@ -63,7 +63,7 @@ async function login(email, password) {
   });
   if (error) {
     alert(error.message);
-    return;
+    return {data:null, error};
   }
   return { data, error };
 }

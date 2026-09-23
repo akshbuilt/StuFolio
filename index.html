@@ -12,8 +12,9 @@
   <title>Stufolio | Portfolio Builder for Students</title>
   <style>
     .hero-right {
-      width: 100%;
-      height: 600px;
+     max-width: 100%;
+      height: 500px;
+    max-height:550px;
       min-width: 0;
       position: relative;
     }
@@ -23,6 +24,16 @@
       height: 100%;
       display: block;
       max-width: 100%;
+    }
+    @media (max-width:768px) {
+      .hero-right{
+        height:300px;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 900px) {
+      .hero-right{
+        height:400px
+      }
     }
     *{
       scroll-behavior: smooth;
@@ -35,7 +46,7 @@
   <main>
     <section id="home">
        <header>
-    <nav class=" px-5 py-2 md:py-5 lg:px-40 flex justify-between">
+    <nav class=" px-5 py-2 md:py-5 md:px- lg:px-40 flex justify-between">
       <div class="font-bold text-[20px] md:text-3xl text-white">
         <h1>StuFolio</h1>
       </div>
@@ -55,7 +66,7 @@
     </nav>
   </header>
       <section id="hero" class="mt-10 grid grid-cols-1 lg:grid-cols-2 min-h-130">
-        <div class="mx-10 my-3 lg:ml-40">
+        <div class="mx-10 my-3 md:ml-20 lg:ml-40">
           <p class="text-[#7c3aed] text-[20px]">✦ Built for students</p>
           <h1 class="text-[48px] leading-16 lg:text-[66px] text-white font-semibold lg:leading-22">
             Your work. <br />
@@ -64,9 +75,7 @@
             <span class="text-[54px] lg:text-[80px] text-[#7c3aed] font-bold">StuFolio</span>.
           </h1>
           <p class="text-[#a1a1aa] text-[16px] md:text-[20px] mt-5">
-            Create a professional portfolio from your projects, achievements,
-            skills, and experiences — without starting from scratch.
-          </p>
+Turn your information into a professional portfolio — in minutes.          </p>
           <div class="mt-10">
             <a class="text:[20px] lg:text-[22px] text-[#7c3aed] p-4" href="#" id="tryDemo">Try Demo</a>
             <a href="#"
@@ -253,11 +262,11 @@
 <form action="src/pages/form.js" id="signupform">
   <div class="flex flex-col m-1 lg:m-3">
     <label for="name" class="text-white text-[20px] font-bold my-2">Full Name</label>
-    <input type="text" name="fullname" id="name" placeholder="e.g. John Doe" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+    <input type="text" name="fullname" id="name" placeholder="e.g. John Doe" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2" required>
         <label for="email" class="text-white text-[20px] font-bold my-2">Email Address</label>
-    <input type="email" name="email" id="email" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+    <input type="email" name="email" id="email" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2" required>
     <label for="password" class="text-white text-[20px] font-bold my-2">Password</label>
-    <input type="password" name="password" id="password" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2">
+    <input type="password" name="password" id="password" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-2" required>
     <button type="submit" id="signbtn" class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
   </div>
 <div id="signupLoader"
@@ -310,9 +319,9 @@
 <form action="src/pages/form.js" id="loginform">
   <div class="flex flex-col m-1 lg:m-3">
         <label for="email" class="text-white text-[20px] font-bold my-1">Email Address</label>
-    <input type="email" name="email" id="loginemail" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <input type="email" name="email" id="loginemail" placeholder="you@example.com" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1" required>
     <label for="password" class="text-white text-[20px] font-bold my-1">Password</label>
-    <input type="password" name="password" id="loginpassword" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1">
+    <input type="password" name="password" id="loginpassword" placeholder="password" class="w-full min-h-auto bg-white px-4 py-2 rounded-lg my-1" required>
     <button type="submit" id="loginbtn" class="block py-2 text-xl my-2 text-white font-semibold rounded-lg bg-[#7c3aed] w-full text-center">Submit</button>
   </div>
   <div id="loginloader"
@@ -381,7 +390,7 @@ Signing you in...
     </section>
          <h1 class="font-bold text-3xl text-white text-left px-8 lg:px-32 my-6 lg:my-12">My Portfolio</h1>
          <div class="mx-8 lg:mx-32 my-10 lg:my-14">
-<div class="w-full rounded-2xl border-2 border-dashed border-white/10 bg-white/2 p-12 text-center transition-all hover:border-[#A78BFA]">
+<div class="w-full rounded-2xl border-2 border-dashed border-gray-600 bg-white/2 p-6 md:p-10 text-center transition-all hover:border-[#A78BFA]">
  <div id="portfolioList">
 </div>
 </div>
@@ -570,7 +579,7 @@ Signing you in...
 <input type="text" name="username" id="infoname" placeholder="e.g. John Doe" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
 <label for="infoemail" class="font-semibold text-[20px] text-white">Email</label>
 <input type="email" name="email" id="infoemail" placeholder="hello123@example.com" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
-<label for="infoProfession" class="font-semibold text-[20px] text-white">Profession</label>
+<label for="infoprofession" class="font-semibold text-[20px] text-white">Profession</label>
 <input type="text" name="profession" id="infoprofession" placeholder="e.g. Student | Designer | Developer" class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
 <label for="infooneliner" class="font-semibold text-[20px] text-white">One liner about You</label>
 <input type="text" name="oneliner" id="infooneliner" placeholder="Hey, I'm [name] ..." class="w-full bg-white px-3 py-2 rounded-xl mb-3" required>
